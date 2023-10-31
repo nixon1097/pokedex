@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Pokedex from "./pages/Pokedex";
 import Page404 from "./pages/Page404";
 import PokemonDetail from "./pages/PokemonDetail";
-import PrivateRoutes from "./components/PrivateROutes";
+import PrivateRoutes from "./components/PrivateRoutes";
 
 function App() {
   return (
