@@ -6,8 +6,8 @@ import { bgByType, borderByType, textByType } from "../../const/pokemos";
 const PokemonCard = ({ pokemonUrl }) => {
   const [pokemon, setpokemon] = useState(null);
   const type = pokemon?.types[0].type.name;
-  const types = pokemon?.types.map((type) => type.type.name);
-  console.log(types);
+  const types = pokemon?.types.map((type) => type.type.name).join(" / ");
+
   useEffect(() => {
     axios
       .get(pokemonUrl)

@@ -1,17 +1,19 @@
 import { bgByType } from "../../const/pokemos";
 
-const MovementsList = ({ pokemon, types }) => {
+const MovementsList = ({ pokemon, type }) => {
   const moves = pokemon?.moves.map((move) => move.move.name);
-  const currentMovents = moves.slice(0, 7);
-  console.log(types);
+  const currentMovents = moves;
+  console.log(type);
   return (
     <>
-      <h2 className=" justify-center font-bold text-2xl">Movements</h2>
-      <section className=" overflow-scroll h-[20%]   grid gap-2 px-1 rounded-xl  text-sm">
-        <ul className="flex flex-wrap  gap-2   text-center justify-evenly  items-center">
+      <h2 className=" justify-center font-bold text-2xl py-2 items-start">
+        Movements
+      </h2>
+      <section className=" overflow-scroll  h-[150px]   grid gap-1  rounded-xl  text-sm">
+        <ul className="flex flex-wrap  gap-4   h-full text-center justify-evenly  items-center text-white">
           {currentMovents?.map((move) => (
             <li
-              className={` rounded-xl  shadow-lg shadow-cyan-500/50 w-[min(80px,_60px)] font-semibold  `}
+              className={` rounded-xl ${bgByType[type]} px-2 shadow-lg shadow-cyan-500/50 w-[min(100%,_auto]   `}
               key={move}
             >
               <h4>{move}</h4>

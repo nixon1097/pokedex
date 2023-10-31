@@ -1,13 +1,17 @@
+import { Link } from "react-router-dom";
+
 const HeaderPokeball = () => {
   return (
     <header>
       <div className="h-12 bg-red-600 relative w-screen">
-        <img
-          src="/image/banner.png"
-          alt=""
-          className="h-[36px] XXS:h-full w-auto  translate-x-3
-           translate-y-6 realive xxs:tranlate-y-4"
-        />
+        <Link to={`/pokedex`} className="trans">
+          <img
+            src="/image/banner.png"
+            alt=""
+            className="h-[36px] XXS:h-full w-auto  translate-x-3
+          translate-y-6 realive xxs:tranlate-y-4"
+          />
+        </Link>
         <div
           className="h-[68px] aspect-square bg-white  rounded-full  absolute right-0 -translate-x-1/4 xxs:-translate-x-1/2
         -bottom-14 border-[7px] border-black after:block after:content-[''] after:absolute
